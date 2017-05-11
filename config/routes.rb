@@ -20,9 +20,9 @@ Rails.application.routes.draw do
   #------------------------------
 
   # # Routes for wine search resource:
-  # get "/winesearch/new",:controller => "wine_search_controller", :action => "wine_search_form"
-  # get "/searchresults/:id",:controller => "wine_search_controller", :action => "search_to_results"
-  
+  get "/winesearch/new",:controller => "wine_search_controller", :action => "wine_search_form"
+  get "/searchresults/:id",:controller => "wine_search_controller", :action => "search_to_results"
+
   #-----------------------------------------------
 
   # Routes for the Varietal resource:
