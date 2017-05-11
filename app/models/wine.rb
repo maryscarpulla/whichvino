@@ -1,6 +1,9 @@
 class Wine < ApplicationRecord
   # Direct associations
 
+  belongs_to :varietal,
+             :counter_cache => true
+
   has_many   :wine_tag_pairs,
              :foreign_key => "tag_id",
              :dependent => :destroy
