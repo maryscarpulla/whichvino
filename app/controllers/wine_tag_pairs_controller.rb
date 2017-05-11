@@ -1,7 +1,7 @@
 class WineTagPairsController < ApplicationController
   def index
     @q = WineTagPair.ransack(params[:q])
-    @wine_tag_pairs = @q.result(:distinct => true).includes(:tag, :tag_name).page(params[:page]).per(10)
+    @wine_tag_pairs = @q.result(:distinct => true).includes(:tag, :wine).page(params[:page]).per(10)
 
     render("wine_tag_pairs/index.html.erb")
   end
