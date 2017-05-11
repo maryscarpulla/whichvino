@@ -24,7 +24,7 @@
           Tasting note name
         </label>
 
-        <input type="text" id="tasting_note_name" name="tasting_note_name" placeholder="Tasting note name" class="form-control" value="<%= @tasting_note_tag.tasting_note_name %>">
+        <%= select_tag(:tasting_note_name, options_from_collection_for_select(Wine.all, :id, :wine_name, @tasting_note_tag.tasting_note_name), :class => "form-control") %>
       </div>
 
       <button class="btn btn-warning">
