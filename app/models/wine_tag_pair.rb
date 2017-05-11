@@ -1,7 +1,7 @@
 class WineTagPair < ApplicationRecord
   # Direct associations
 
-  belongs_to :tag_name,
+  belongs_to :wine,
              :class_name => "TastingNoteTag",
              :foreign_key => "tag_id"
 
