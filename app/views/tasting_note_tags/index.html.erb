@@ -15,7 +15,7 @@
 
       <% @tasting_note_tags.each do |tasting_note_tag| %>
       <tr>
-        <td><%= tasting_note_tag.tasting_note_name %></td>
+        <td><%= tasting_note_tag.tasting_note.wine_name %></td>
         <td>
           <a href="/tasting_note_tags/<%= tasting_note_tag.id %>" class="btn btn-primary">Show</a>
           <a href="/tasting_note_tags/<%= tasting_note_tag.id %>/edit" class="btn btn-warning">Edit</a>
