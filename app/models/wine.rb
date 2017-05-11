@@ -1,6 +1,9 @@
 class Wine < ApplicationRecord
   # Direct associations
 
+  has_many   :bucket_list_wines,
+             :dependent => :destroy
+
   has_many   :tasting_note_tags,
              :foreign_key => "tasting_note_name",
              :dependent => :destroy
