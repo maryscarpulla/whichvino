@@ -1,6 +1,10 @@
 class Wine < ApplicationRecord
   # Direct associations
 
+  has_many   :tasting_note_tags,
+             :foreign_key => "tasting_note_name",
+             :dependent => :destroy
+
   has_many   :reviews,
              :dependent => :destroy
 
