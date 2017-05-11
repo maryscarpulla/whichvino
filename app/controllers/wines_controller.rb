@@ -6,6 +6,12 @@ class WinesController < ApplicationController
   end
 
   def show
+    @wine_tag_pair = WineTagPair.new
+    @suggested_wine = SuggestedWine.new
+    @bucket_list_wine = BucketListWine.new
+    @tasting_note_tag = TastingNoteTag.new
+    @review = Review.new
+    @my_wine = MyWine.new
     @wine = Wine.find(params[:id])
 
     render("wines/show.html.erb")
