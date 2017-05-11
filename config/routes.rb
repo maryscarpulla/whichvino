@@ -18,13 +18,6 @@ Rails.application.routes.draw do
   # DELETE
   get "/delete_wine_tag_pair/:id", :controller => "wine_tag_pairs", :action => "destroy"
   #------------------------------
-##### TEST########
-get "/winesearch/new",:controller => "wine_search_controller", :action => "wine_search_form"
-get "/searchresults/:id",:controller => "wine_search_controller", :action => "search_to_results"
-
-
-
-
 
   # Routes for the Varietal resource:
   # CREATE
