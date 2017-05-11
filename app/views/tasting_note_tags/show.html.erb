@@ -6,7 +6,13 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Tasting note name</dt>
-      <dd><%= @tasting_note_tag.tasting_note_name %></dd>
+      <dd>
+        <% if @tasting_note_tag.tasting_note.present? %>
+          <a href="/wines/<%= @tasting_note_tag.tasting_note_name %>">
+            <%= @tasting_note_tag.tasting_note.wine_name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
